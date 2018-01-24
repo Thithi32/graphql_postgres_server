@@ -7,3 +7,11 @@
 `npm install`
 
 `npm start`
+
+## Test
+
+`http://localhost:3005/graphiql`
+
+`{
+  hello
+}`
