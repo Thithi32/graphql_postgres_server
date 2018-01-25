@@ -12,6 +12,19 @@
 
 `http://localhost:3005/graphiql`
 
-`{
-  hello
-}`
+```
+{
+  allUsers {
+    id,
+    username
+  }
+}
+```
+
+```
+mutation {
+  createUser(username:"Jean") {
+    id
+  }
+}
+```

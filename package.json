@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node index.js"
+    "start": "nodemon --exec babel-node index.js"
   },
   "keywords": [
     "graphql",
@@ -19,12 +19,16 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "graphql": "^0.12.3",
-    "graphql-tools": "^2.19.0"
+    "graphql-tools": "^2.19.0",
+    "pg": "^6.4.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.32.1"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
     "eslint": "^4.16.0",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "nodemon": "^1.14.11"
   }
 }

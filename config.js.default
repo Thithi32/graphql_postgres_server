@@ -1,0 +1,10 @@
+const config = {
+  DB: {
+    DATABASE: 'xxxxxx',
+    USER: 'xxxxxxx',
+    PASSWORD: 'xxxxxx',
+    HOST: 'xxxxxxx',
+  },
+};
+
+export default config;

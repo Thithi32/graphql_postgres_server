@@ -5,6 +5,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 
 import typeDefs from './schema';
 import resolvers from './resolvers';
+import models from './models';
 
 const schema = makeExecutableSchema({
   typeDefs,
@@ -24,9 +25,11 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
+app.use('/graphql', bodyParser.json(), graphqlExpress({ schema, context: { models } }));
 
 const PORT = 3005;
-app.listen(PORT, () => {
-  console.log(`Server running on ${PORT}...`);
+models.sequelize.sync().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server running on ${PORT}...`);
+  });
 });
